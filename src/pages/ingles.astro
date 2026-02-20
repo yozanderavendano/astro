@@ -151,8 +151,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
 <style>
-
-    .btn-regresar {
+.btn-regresar {
     display: inline-block;
     padding: 8px 15px;
     margin-bottom: 20px;
@@ -171,12 +170,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     color: white;
 }
 
-    main{
-        width:100%;
-	min-height: 100vh
-    }
+main {
+    width: 100%;
+    min-height: 100vh;
+}
 
-    .language-container {
+.language-container {
     max-width: 900px;
     margin: 0 auto;
     background: #fff;
@@ -196,9 +195,7 @@ h1 { color: #007bff; }
 h2 { color: #2c3e50; border-left: 5px solid #007bff; padding-left: 10px; margin-top: 40px; }
 h3 { color: #e67e22; }
 
-.topic {
-    margin-bottom: 30px;
-}
+.topic { margin-bottom: 30px; }
 
 .formula {
     background: #e9ecef;
@@ -207,6 +204,7 @@ h3 { color: #e67e22; }
     text-align: center;
     border-radius: 5px;
     margin: 10px 0;
+    word-wrap: break-word; 
 }
 
 .grid-container {
@@ -239,11 +237,7 @@ h3 { color: #e67e22; }
     transition: background 0.3s;
 }
 
-.video-links a:hover {
-    background: #a30000;
-}
-
-
+.video-links a:hover { background: #a30000; }
 
 .table-container {
     width: 100%;
@@ -260,41 +254,14 @@ h3 { color: #e67e22; }
     font-size: 0.95rem;
 }
 
-.verbs-table thead {
-    background-color: #2c3e50;
-    color: white;
-    text-align: left;
-}
+.verbs-table thead { background-color: #2c3e50; color: white; text-align: left; }
+.verbs-table th, .verbs-table td { padding: 12px 15px; border-bottom: 1px solid #ddd; }
+.verbs-table tbody tr:nth-child(even) { background-color: #f2f2f2; }
+.verbs-table tbody tr:hover { background-color: #e3f2fd; transition: 0.2s; }
+.verbs-table td:last-child { font-style: italic; color: #555; }
 
-.verbs-table th, .verbs-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
-}
+.table-tip { font-size: 0.85rem; color: #666; margin-top: 10px; }
 
-
-.verbs-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-
-.verbs-table tbody tr:hover {
-    background-color: #e3f2fd;
-    transition: 0.2s;
-}
-
-
-.verbs-table td:last-child {
-    font-style: italic;
-    color: #555;
-}
-
-.table-tip {
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* Caja especial para Reported Speech */
 .reported-speech-box {
     background-color: #fff4e5; 
     border-left: 5px solid #e67e22;
@@ -314,27 +281,10 @@ h3 { color: #e67e22; }
     box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
 }
 
-.step {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 0.9rem;
-}
-
-.step span {
-    padding: 2px 5px;
-}
-
-.arrow {
-    font-size: 2rem;
-    color: #e67e22;
-    font-weight: bold;
-}
-
-.highlight {
-    color: #d35400;
-    font-weight: bold;
-}
+.step { display: flex; flex-direction: column; gap: 5px; font-size: 0.9rem; }
+.step span { padding: 2px 5px; }
+.arrow { font-size: 2rem; color: #e67e22; font-weight: bold; }
+.highlight { color: #d35400; font-weight: bold; }
 
 .important-note {
     background: #fdf2f2;
@@ -342,5 +292,43 @@ h3 { color: #e67e22; }
     border-radius: 5px;
     font-size: 0.9rem;
     border: 1px dashed #e74c3c;
+}
+
+
+@media (max-width: 768px) {
+
+    .language-container {
+        padding: 20px 15px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; margin-top: 25px; }
+
+    
+    .step-back-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+
+    
+    .reported-speech-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    
+    .verbs-table th, .verbs-table td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
 }
 </style>
