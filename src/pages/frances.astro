@@ -112,9 +112,41 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <style>
 
-    .btn-regresar {
-    display: inline-block;
-    padding: 8px 15px;
+.language-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px; 
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.lang-header {
+    text-align: center;
+    border-bottom: 4px solid #007bff; 
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+h1 { color: #007bff; font-size: 1.6rem; }
+
+h2 { 
+    color: #2c3e50; 
+    border-left: 5px solid #002395; 
+    padding-left: 10px; 
+    margin-top: 30px; 
+    font-size: 1.3rem;
+}
+
+h3 { color: #ed2939; font-size: 1.1rem; }
+
+
+.btn-regresar {
+    display: block; 
+    text-align: center;
+    padding: 12px 15px;
     margin-bottom: 20px;
     background-color: #f8f9fa; 
     color: #007bff; 
@@ -126,162 +158,103 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     transition: all 0.3s ease;
 }
 
-.btn-regresar:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-.language-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.lang-header {
-    text-align: center;
-    /* Detalle sutil: degradado con colores de Francia muy delgados */
-    border-bottom: 4px solid #007bff; 
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-}
-
-h1 { color: #007bff; } /* Azul de la sección de inglés */
-
-h2 { 
-    color: #2c3e50; 
-    border-left: 5px solid #002395; /* Azul oscuro francés en el borde */
-    padding-left: 10px; 
-    margin-top: 40px; 
-}
-
-h3 { color: #ed2939; } /* Rojo francés para subtemas */
-
-/* --- ABECEDARIO --- */
 .alphabet-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
     margin: 20px 0;
 }
 
-.letter {
-    background: #f8f9fa;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-/* --- CUADRÍCULA DE VERBOS (Igual que inglés) --- */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
     margin-top: 20px;
 }
 
-.grid-item {
+.grid-item, .letter {
     background: #f8f9fa;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    border-top: 3px solid #007bff; /* Detalle azul */
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/* --- TABLAS (Mismo estilo que inglés) --- */
+
 .table-container {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: auto; 
     margin-top: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch;
 }
 
 .verbs-table {
     width: 100%;
+    min-width: 500px; 
     border-collapse: collapse;
 }
 
-.verbs-table thead {
-    background-color: #2c3e50;
-    color: white;
-}
-
 .verbs-table th, .verbs-table td {
-    padding: 12px 15px;
+    padding: 10px;
+    font-size: 0.9rem;
     border-bottom: 1px solid #ddd;
-    text-align: left;
 }
 
-.verbs-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Fórmulas y Alertas */
+.formula, .language-alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    word-wrap: break-word;
 }
 
-/* --- BOTONES DE VIDEO (Mismo estilo que inglés pero sutil) --- */
-.video-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+.formula { background: #e9ecef; text-align: center; font-weight: bold; }
+.language-alert { background: #fff4e5; border-left: 5px solid #e67e22; }
 
+
+.video-links { display: flex; flex-direction: column; gap: 10px; }
 .fr-btn {
     text-decoration: none;
     color: #fff;
-    background: #2c3e50; /* Color neutro oscuro */
-    padding: 12px;
+    background: #2c3e50;
+    padding: 14px;
     border-radius: 5px;
     text-align: center;
-    transition: 0.3s;
-    border-left: 8px solid #002395; /* Detalle Azul Francés */
+    border-left: 8px solid #002395;
 }
 
-.fr-btn:hover {
-    background: #1a252f;
-    border-left: 8px solid #ed2939; /* Cambia a Rojo Francés al pasar el mouse */
-}
-
-.formula {
-    background: #e9ecef;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.language-alert {
-    background: #fff4e5; /* Color de advertencia suave como en inglés */
-    border-left: 5px solid #e67e22;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-/* Estilo para las listas de gramática francesa */
-.topic ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
+/* Listas */
 .topic ul li {
     background: #ffffff;
     margin-bottom: 8px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
-    border-left: 3px solid #dee2e6;
-    transition: border-color 0.3s;
+    border: 1px solid #eee;
+    border-left: 4px solid #dee2e6;
 }
 
-.topic ul li:hover {
-    border-left-color: #007bff; /* Azul de tu guía de inglés */
-}
 
-.topic ul li strong {
-    color: #ed2939; /* Un toque de rojo francés para resaltar el artículo */
-    font-family: 'Courier New', Courier, monospace;
+@media (min-width: 768px) {
+    .language-container {
+        padding: 40px; 
+    }
+
+    h1 { font-size: 2.2rem; }
+    
+    .btn-regresar {
+        display: inline-block; 
+        width: auto;
+    }
+
+    .grid-container {
+        gap: 20px;
+    }
+
+    .btn-regresar:hover { background-color: #007bff; color: white; }
+    .fr-btn:hover { background: #1a252f; border-left-color: #ed2939; }
+    .topic ul li:hover { border-left-color: #007bff; }
 }
 </style>
