@@ -1,0 +1,288 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Pruybea" description="asdasd">
+    <a href="idiomas" class="btn-regresar">←</a>
+    <main class="language-container">
+        <header class="lang-header">
+            <h1>Guide de Langue Française</h1>
+            <p>Bienvenue! Aprende las bases del idioma del amor y la diplomacia.</p>
+        </header>
+
+        <section class="topic">
+            <h2>1. Estructura de la Oración</h2>
+            <p>Al igual que el inglés y el español, el francés sigue el orden <strong>Sujeto + Verbo + Objeto</strong>.</p>
+            <div class="formula">Sujet + Verbe + Complément</div>
+            <p><strong>Ejemplo:</strong> <em>Je (Sujeto) mange (Verbo) une pomme (Objeto).</em></p>
+            <p class="table-tip">* Nota: En francés, el sujeto siempre debe estar presente (no se puede omitir como en español).</p>
+        </section>
+
+        <section class="topic">
+            <h2>2. L'Alphabet (El Abecedario)</h2>
+            <p>Las letras son iguales, pero el nombre y la forma de pronunciarlas cambian. Aquí tienes la guía fonética:</p>
+            <div class="alphabet-grid">
+                <div class="letter"><strong>A</strong> [a]</div>
+                <div class="letter"><strong>B</strong> [be]</div>
+                <div class="letter"><strong>C</strong> [se]</div>
+                <div class="letter"><strong>D</strong> [de]</div>
+                <div class="letter"><strong>E</strong> [ø]</div>
+                <div class="letter"><strong>F</strong> [ef]</div>
+                <div class="letter"><strong>G</strong> [je]</div>
+                <div class="letter"><strong>H</strong> [ash]</div>
+                <div class="letter"><strong>I</strong> [i]</div>
+                <div class="letter"><strong>J</strong> [ji]</div>
+                <div class="letter"><strong>R</strong> [erre]</div>
+                <div class="letter"><strong>U</strong> [y]</div>
+            </div>
+            <p class="language-alert"><strong>¡Tip Pro!</strong> La "H" es siempre muda y la "R" se pronuncia de forma gutural (desde la garganta).</p>
+        </section>
+
+        <section class="topic">
+            <h2>3. Verbos Fundamentales: Être y Avoir</h2>
+            <div class="grid-container">
+                <div class="grid-item fr-blue">
+                    <h4>Être (Ser/Estar)</h4>
+                    <p>Je suis<br>Tu es<br>Il/Elle est<br>Nous sommes</p>
+                </div>
+                <div class="grid-item fr-red">
+                    <h4>Avoir (Haber/Tener)</h4>
+                    <p>J'ai<br>Tu as<br>Il/Elle a<br>Nous avons</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="topic">
+            <h2>4. Palabras Útiles</h2>
+            <div class="table-container">
+                <table class="verbs-table">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Français</th>
+                            <th>Pronunciación aprox.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Hola / Buenos días</td><td>Bonjour</td><td>[bon-shur]</td></tr>
+                        <tr><td>Por favor</td><td>S'il vous plaît</td><td>[sil-vu-ple]</td></tr>
+                        <tr><td>Gracias</td><td>Merci</td><td>[mer-si]</td></tr>
+                        <tr><td>Lo siento</td><td>Désolé</td><td>[de-zo-le]</td></tr>
+                        <tr><td>¿Cómo estás?</td><td>Comment ça va?</td><td>[coman-sa-va]</td></tr>
+                        <tr><td>Adiós</td><td>Au revoir</td><td>[o-re-vuar]</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="topic">
+    <h2>5. Estructuras Clave: Negación y Partitivos</h2>
+    
+    <h3>La Negación en "Sándwich"</h3>
+    <p>En francés, la negación envuelve al verbo usando dos palabras: <strong>Ne</strong> y <strong>Pas</strong>.</p>
+    <div class="formula">Sujeto + <strong>Ne</strong> + Verbo + <strong>Pas</strong></div>
+    <p><strong>Ejemplo:</strong> <em>Je <strong>ne</strong> mange <strong>pas</strong></em> (Yo no como).</p>
+    <p class="table-tip">* Si el verbo empieza con vocal, el "Ne" se convierte en "N'": <em>Je <strong>n'</strong>ai <strong>pas</strong></em>.</p>
+
+    <h3>Artículos Partitivos (Hablar de comida)</h3>
+    <p>A diferencia del español, en francés siempre debemos usar un artículo para indicar "una parte de algo" (como cuando dices "quiero (un poco de) pan").</p>
+    <ul>
+        <li><strong>Du:</strong> Masculino (<em>Du pain</em> / Pan).</li>
+        <li><strong>De la:</strong> Femenino (<em>De la soupe</em> / Sopa).</li>
+        <li><strong>De l':</strong> Antes de vocal (<em>De l'eau</em> / Agua).</li>
+        <li><strong>Des:</strong> Plural (<em>Des pommes</em> / Manzanas).</li>
+    </ul>
+</section>
+
+    <section class="video-resources">
+    <h2>Material de Apoyo: Domina el Francés</h2>
+    <p>He seleccionado estos 7 videos para que perfecciones los puntos más complejos explicados arriba:</p>
+    
+    <div class="video-links">
+        <a href="https://youtu.be/Z75LcYDfVsw?si=8Ph8sSaAhCVaai1x" target="_blank" class="fr-btn">1. La Pronunciación Francesa: Guía de sonidos nasales y vocales</a>
+        <a href="#" target="_blank" class="fr-btn">2. Los 30 verbos esenciales (Être, Avoir y verbos en -ER)</a>
+        <a href="#" target="_blank" class="fr-btn">3. La Negación: Cómo usar "Ne... Pas" sin cometer errores</a>
+        <a href="#" target="_blank" class="fr-btn">4. Artículos Partitivos: ¿Cuándo usar Du, De la, De l' o Des?</a>
+        <a href="#" target="_blank" class="fr-btn">5. El abecedario fonético: Cómo deletrear correctamente</a>
+        <a href="#" target="_blank" class="fr-btn">6. Números y Cantidades: Del 1 al 100 y cómo usarlos</a>
+        <a href="#" target="_blank" class="fr-btn">7. Estrategias para entender el francés hablado (Listening)</a>
+    </div>
+</section>
+    </main>
+</BaseLayout>
+
+<style>
+
+    .btn-regresar {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa; 
+    color: #007bff; 
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.language-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.lang-header {
+    text-align: center;
+    /* Detalle sutil: degradado con colores de Francia muy delgados */
+    border-bottom: 4px solid #007bff; 
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+h1 { color: #007bff; } /* Azul de la sección de inglés */
+
+h2 { 
+    color: #2c3e50; 
+    border-left: 5px solid #002395; /* Azul oscuro francés en el borde */
+    padding-left: 10px; 
+    margin-top: 40px; 
+}
+
+h3 { color: #ed2939; } /* Rojo francés para subtemas */
+
+/* --- ABECEDARIO --- */
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.letter {
+    background: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* --- CUADRÍCULA DE VERBOS (Igual que inglés) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border-top: 3px solid #007bff; /* Detalle azul */
+}
+
+/* --- TABLAS (Mismo estilo que inglés) --- */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.verbs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.verbs-table thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.verbs-table th, .verbs-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.verbs-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* --- BOTONES DE VIDEO (Mismo estilo que inglés pero sutil) --- */
+.video-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fr-btn {
+    text-decoration: none;
+    color: #fff;
+    background: #2c3e50; /* Color neutro oscuro */
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    border-left: 8px solid #002395; /* Detalle Azul Francés */
+}
+
+.fr-btn:hover {
+    background: #1a252f;
+    border-left: 8px solid #ed2939; /* Cambia a Rojo Francés al pasar el mouse */
+}
+
+.formula {
+    background: #e9ecef;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.language-alert {
+    background: #fff4e5; /* Color de advertencia suave como en inglés */
+    border-left: 5px solid #e67e22;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Estilo para las listas de gramática francesa */
+.topic ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.topic ul li {
+    background: #ffffff;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #dee2e6;
+    transition: border-color 0.3s;
+}
+
+.topic ul li:hover {
+    border-left-color: #007bff; /* Azul de tu guía de inglés */
+}
+
+.topic ul li strong {
+    color: #ed2939; /* Un toque de rojo francés para resaltar el artículo */
+    font-family: 'Courier New', Courier, monospace;
+}
+</style>

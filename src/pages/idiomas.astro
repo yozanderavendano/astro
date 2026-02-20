@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Pruybea" description="asdasd">
+    <header>
+        <h1>¿Que idioma quieres aprender?</h1>
+        <h2>Elije el idioma de tu preferencia</h2>
+    </header>
+
+    <main class="languages-container">
+        <section class="language-card">
+            <a href="ingles">
+            <img src="https://flagcdn.com/w320/us.png" alt="Bandera de Estados Unidos - Inglés">
+            <h3>Inglés</h3>
+            <p>Domina el idioma universal de los negocios y la tecnología.</p>
+            </a>
+        </section>
+
+        <section class="language-card">
+            <a href="español">
+            <img src="https://flagcdn.com/w320/es.png" alt="Bandera de España - Español">
+            <h3>Español</h3>
+            <p>Conecta con más de 500 millones de personas en todo el mundo.</p>
+            <a/>
+        </section>
+
+        <section class="language-card">
+            <a href="frances">
+            <img src="https://flagcdn.com/w320/fr.png" alt="Bandera de Francia - Francés">
+            <h3>Francés</h3>
+            <p>Descubre el idioma de la diplomacia, el arte y la gastronomía.</p>
+            </a>
+        </section>
+
+        <section class="language-card">
+            <a href="portugues">
+            <img src="https://flagcdn.com/w320/br.png" alt="Bandera de Brasil - Portugués">
+            <h3>Portugués</h3>
+            <p>Aprende un idioma vibrante con grandes oportunidades culturales.</p>
+            </a>
+        </section>
+    </main>
+</BaseLayout>
+
+<style>
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0754a0;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #f4f7f6;
+}
+
+h2 {
+    font-weight: 300;
+    margin-top: 10px;
+    color: #f4f7f6;
+}
+a{
+    text-decoration: none;
+    color: #2980b9;
+}
+
+
+.languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.language-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-10px);
+}
+
+.language-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.language-card h3 {
+    margin: 15px 0 10px;
+    color: #2980b9;
+}
+
+.language-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+</style>

@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	
+		<main class="hero-container">
+        <section class="content-left">
+            <h1>La mejor guía para aprender idiomas.</h1>
+            <p>¿Te interesa conocer lo basico de distintos idomas? <small>El momento de empezar es hoy.</small></p>
+            <a href="idiomas">Comenzar ahora</a>
+        </section>
+
+        <section class="image-gallery">
+            <div class="card">
+                <img src="https://www.hola.com/horizon/square/7589be8ef584-torre-eiffel-panoramica-paris-t.jpg" alt="Torre Eiffel">
+            </div>
+            <div class="card">
+                <img src="https://cdn-imgix.headout.com/media/images/d777f7d9-83e8-43d7-9f06-6ea3683f516e-1750702096435-273021.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop" alt="Big Ben">
+            </div>
+            <div class="card">
+                <img src="https://content-viajes.nationalgeographic.com.es/medio/2024/09/19/coliseo_9b206d89_240919151753_1280x853.jpg" alt="Coliseo Romano">
+            </div>
+        </section>
+    </main>
+	
+</BaseLayout>
+
+<style>
+
+	main{
+	width:100%;
+	min-height: 100vh
+	}
+
+.hero-container {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    gap: 50px;
+}
+
+.content-left {
+    flex: 1;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    color:#2c3e50;
+    margin-bottom: 15px;
+}
+
+@media screen (max-width: 720px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+a{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0754a0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.image-gallery {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+.card:nth-child(3) {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .image-gallery {
+        margin-top: 40px;
+    }
+}
+</style>
