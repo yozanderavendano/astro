@@ -150,13 +150,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </main>
 
 
-Esta sección de inglés es un poco más compleja porque incluye el "Step-back container" (para gramática de Reported Speech). El problema es que, aunque tienes una Media Query al final, los estilos base de arriba siguen teniendo "pesos" que a veces el navegador prioriza mal, o falta el box-sizing para que los paddings no ensanchen las cajas.
-
-Aquí tienes el código ajustado con Mobile-First. He transformado el contenedor de pasos gramaticales para que en móvil se vea como una lista vertical clara y en escritorio como una línea de tiempo horizontal.
-
-Código Refactorizado
-CSS
-
 <style>
 
 main {
