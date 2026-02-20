@@ -47,43 +47,47 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 header {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px; 
     background-color: #0754a0;
     color: rgb(255, 255, 255);
 }
 
 h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #f4f7f6;
 }
 
 h2 {
     font-weight: 300;
     margin-top: 10px;
+    font-size: 1.2rem;
     color: #f4f7f6;
 }
-a{
+
+a {
     text-decoration: none;
     color: #2980b9;
 }
 
-
 .languages-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: center; 
     gap: 20px;
     padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .language-card {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 250px;
+    
+    
+    width: 100%; 
+    max-width: 350px; 
+    box-sizing: border-box; 
+    
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease;
@@ -108,5 +112,26 @@ a{
 .language-card p {
     font-size: 0.9rem;
     color: #666;
+}
+
+
+
+@media (min-width: 768px) {
+    
+    h1 {
+        font-size: 2.5rem; 
+    }
+
+    .languages-container {
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .language-card {
+        width: 250px;
+    }
 }
 </style>
